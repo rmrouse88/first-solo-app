@@ -1,0 +1,12 @@
+<!-- The app component serves as an ever-present master container that will persist through different views of the application -->
+<!-- We will leave the 'index.html' root file alone unless we must absolutely change it -->
+<div>
+  <ul class = 'navbar'>
+    <a class='navbar-brand' href=''> {{ pageTitle }} </a>
+    <li><a [routerLink] = "['/welcome']">Home</a></li>
+    <li><a [routerLink] = "['/tweets']">Tweet Engine</a></li>
+  </ul>
+  <div class = 'container'>
+      <router-outlet></router-outlet>
+  </div>
+</div>
