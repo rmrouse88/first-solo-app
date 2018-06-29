@@ -10,6 +10,6 @@ router.get('/welcome', function (req,res) {
 
 // router.get('/dashboard')
 
-router.get('/findone', controller.tweet_list)
+router.get('/find_one', controller.tweet_list)
 
 module.exports = router;

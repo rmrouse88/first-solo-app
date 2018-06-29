@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as mongodb from 'mongodb';
 
-import { TweetListService } from './tweet-list.service';
+import { TweetListService } from '../core/tweet-list.service';
 import { IProduct } from './product';
 
 @Component({

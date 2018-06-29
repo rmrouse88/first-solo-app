@@ -1,0 +1,30 @@
+<div class = 'container container-fluid'>
+  <div class = 'row'>
+    <h1> {{ pageTitle }} </h1>
+  </div>
+  <div class = 'row'>
+    <div class = 'card'>
+        <div class = 'card-header'>
+          Sup blitches   
+        </div>
+        <div class = 'card-body'>
+          This is where the Lorum Ipsum goes
+        </div>
+    </div>
+  </div> 
+  <div class = 'row' *ngIf = 'tweet'>
+    <div class = 'card'>
+      <div class = 'card-header'>
+        {{ tweet.user_name }}
+      </div>
+      <div class = 'card-body'>
+        {{ tweet.text}}
+      </div>
+    </div>
+  </div>
+  <div class = 'row'>
+      <button class = 'btn btn-primary'> Click for good time </button>
+  </div>
+
+
+
