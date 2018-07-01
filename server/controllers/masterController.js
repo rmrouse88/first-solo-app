@@ -2,14 +2,16 @@
 
 var Tweet = require('../models/tweet-model')
 
-exports.tweet_list = function(req, res) {
-    Tweet.findOne()
-        .exec(function(err, tweet) { 
-            console.log(tweet.user_name)
-            res.send
+exports.find_one = function(req, res, next) {
+    Tweet.find()
+        .limit(5)
+        .exec(function(err, tweet) {
+        if (err) {console.log(err)};
+        res.json(tweet)
     })
 };
 
-exports.findOne = function(req, res) { 
-    Tweet.findOne()
-}
+// ,
+// exports.findOne = function(req, res) { 
+//     Tweet.findOne()
+// }

@@ -1,0 +1,53 @@
+<div class = 'container-fluid'>
+  <div class = 'page-header'>
+    <h1>
+      {{ pageTitle }}
+    </h1>
+    <h3>
+      Behind the scenes
+    </h3>
+  </div>
+  <div class = 'index-gallery'>
+    <h1>
+      Scraping Tweets with Python
+    </h1>
+    <p>I would obviously need tweets to power the project.  If you are familiar enough with the Twitter API, and had a good understanding of 
+        OAUTH handling, then you could certainly interact with Twitter without the need of third-party libraries.  But becoming an absolute expert
+        in the twitter API and all concepts of HTML protocols was beyond the scope of this project.   
+    </p>
+    <p>
+      There are several Python modules that have seen extensive use in scraping tweets.  One of the most popular
+      is <b><a href = 'http://www.tweepy.org/'>Tweepy</a></b>.  Tweepy makes OAUTH authentication, queries, and pagination very straightforward. 
+      But Tweepy has one downside:  It defaults to Twitter's 7-day API endpoing.
+      For the uninitiated, Twitter has several endpoints available for access:</p>
+      <ul>
+        <li>7-day</li>
+        <p> Access a random sampling of tweets from the past seven days </p>
+        <li>30-day</li> <p>Full access to the past 30 days worth of tweets</p>
+        <li>Full-Archive</li> <p> Access to the all historical tweets </p>
+      </ul> 
+      <p>
+        Tweepy's default 7-day endpoint set-up may not have been a problem but for one small problem:  I waited until the third week of May to start the project.
+        I was more than 7 days removed from the finish of OTC 2018, and would therefore be unable to obtain the tweets for analysis.  Rather than get under the hood of 
+        Tweepy's implementation, I looked around for a library that offered a bit more flexibility out-of-the-box.
+      </p>
+      <p>After some more digging, I landed on the <b><a href ='https://github.com/twitterdev/search-tweets-python'>Search Tweets module</a></b>.  This offered authentication and support
+        to the full range of Twitter endpoints, making it perfect for my needs.  Importantly, access to premium-level endpoints (30-day and full-archive) require further 
+        vetting by Twitter's team, as well as a monthly subscription charge, prior to gaining access.  Once these were in place, I was ready to start scraping
+      </p>
+      <h2>
+        Credential Handling with Search Tweets
+      </h2>
+      <p> 
+        The first step is to create a YAML file containing your credentials.  Although I had never created a file with a .yaml extension before, Python's standard library contains
+        a yaml module that can handle the read/write.  Import the module, and the process is similar to writing data out to .txt or .csv files.
+      </p>
+
+      <code>
+        asdfadsfasdfsd
+      </code>
+
+       
+      
+    </div>
+</div>

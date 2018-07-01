@@ -7,9 +7,6 @@ router.get('/welcome', function (req,res) {
     res.send('home page');
 }
 )
-
-// router.get('/dashboard')
-
-router.get('/find_one', controller.tweet_list)
+router.get('/find_one', controller.find_one)
 
 module.exports = router;

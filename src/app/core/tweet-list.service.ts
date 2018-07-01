@@ -18,7 +18,8 @@ export class TweetListService{
         return this._http.get<IProduct[]>(url);
     }
 
-    find_one(): Observable<ITweet> {
-        return this._http.get<ITweet>(this.express_url);
+    find_one(): Observable<ITweet[]> {
+        console.log(`creating observable to ${this.express_url}`)
+        return this._http.get<ITweet[]>(this.express_url);
     }
 }

@@ -9,18 +9,19 @@ import { ITweet } from '../interfaces/tweet.interface'
   styleUrls: ['./single-tweet.component.css']
 })
 export class SingleTweetComponent implements OnInit {
-  pageTitle = "Single Tweet Viewer"
+  pageTitle = "Tweet Listing"
 
-  tweet:ITweet;
+  tweets: ITweet[] = [];
 
   constructor(private tweetListService: TweetListService) { }
 
   ngOnInit() {
     this.tweetListService.find_one()
       .subscribe(
-        (data: ITweet) => {
-          this.tweet = data,
-          console.log(data)
+        (data:ITweet[]) => {
+          this.tweets = data;
+          console.log(data);
+          console.log('subscribed to observable')
         },
         (err: any) => console.log(err))
   }

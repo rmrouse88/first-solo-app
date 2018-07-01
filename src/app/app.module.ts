@@ -9,6 +9,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { TweetListComponent } from './tweet-list/tweet-list.component';
 import { TweetListService } from './core/tweet-list.service';
 import { SingleTweetComponent } from './single-tweet/single-tweet.component';
+import { ProjectDetailComponent } from './project-detail/project-detail.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { SingleTweetComponent } from './single-tweet/single-tweet.component';
     WelcomeComponent,
     TweetListComponent,
     SingleTweetComponent,
+    ProjectDetailComponent,
     ],
   imports: [
     BrowserModule,
@@ -25,6 +27,7 @@ import { SingleTweetComponent } from './single-tweet/single-tweet.component';
       { path: "welcome", component: WelcomeComponent },
       { path: "tweets", component: TweetListComponent },
       { path: "find-one", component: SingleTweetComponent },
+      { path: "implementation", component: ProjectDetailComponent},
       { path: '**', redirectTo:"welcome", pathMatch: 'full'}
     ])
   ],

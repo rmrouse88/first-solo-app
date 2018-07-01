@@ -1,4 +1,43 @@
-<div class = 'jumbotron'>
-  <h1> Welcome to the First Solo App </h1>
-    <p> Lorem Ipsum Doe </p>
+<article class = 'index-intro'>
+    <div class = 'container h-100'>
+      <div class = 'jumbotron'> 
+        <div class = 'row'>
+          <div class = 'col-sm-6'>
+              <h1>{{ pageTitle }}</h1>
+              <h3>A full stack development project combining Python and the M.E.A.N. Development Stack</h3>
+          </div>
+          <div class = 'col-sm-6'>
+          </div>
+        </div>
+      </div>
+    </div>
+</article>
+<div class = 'container'>
+  <div class = 'page-header'>
+    <h3>The Motivation</h3>
+    <p> </p>
+  </div>
+  <p>
+    This project resulted from a need to become self-reliant in sourcing, storing, and presenting data for analysis.
+    I have previously used a <b>ton</b> of pre-packaged data: Supplied for course projects; from sites like Kaggle; obtained from a structured RDBMS like SAP or NetSuite.
+    While pre-packaged data is convenient, it does not force the user to understand the intricacies of piecing together a data pipeline.  </p>
+  <p>
+    The original idea was to scrape all available tweets referencing OTC2018 and save them to a database.  Straightforward in concept, but beyond the extent of my know-how in the first week of May 2018.</p>
+  <p>To pull off the project, I would need to pull the following pieces together:
+  </p>
+    <ol>
+      <li>  Find a tool for scraping the tweets themselves </li>
+      <li>  Locate a suitable database for storing the tweets once they were obtained </li>
+      <li>  Conduct topic modeling on the tweet text </li>
+      <li>  Present the results in a (<i>somewhat</i>) professional medium</li>
+    </ol>
+    <div class = 'row justify-content-center'>
+        <pre>
+          <code class = 'python'>
+            def almost(a,b,c):
+              return a+b+c
+          </code>
+        </pre>
+    </div>
+
 </div>
