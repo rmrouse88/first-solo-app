@@ -12,6 +12,7 @@ import { IProduct } from './product';
 
 export class TweetListComponent implements OnInit {
 
+  
   constructor(private tweetListService: TweetListService) { }
 
   url:string = 'https://raw.githubusercontent.com/DeborahK/Angular-GettingStarted/master/APM-Final%20V6/src/api/products/products.json';

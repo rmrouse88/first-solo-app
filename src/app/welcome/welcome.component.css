@@ -1,0 +1,29 @@
+.index-intro .jumbotron {
+    background-image: linear-gradient(rgba(0,0,0,.8),
+    rgba(0,0,0,0)),
+    url("http://2018.otcnet.org/__media/Content/17OTC_MON_RWHITE_0388.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0px 50px 200px 10px;
+    margin:0px;
+    color: white;
+    align-content: flex-start;
+}
+
+.index-intro {
+    width:100%;
+    background-color: rgb(177, 177, 177)
+}
+
+.jumbotron h1 {
+    font-weight: bold;
+    font-size: 4rem;
+    align-content: flex-end;
+    padding:0px;
+    margin: 0px;
+}
+
+.jumbotron h3 {
+    font-weight: 300;
+    font-size: 1.5rem;
+}

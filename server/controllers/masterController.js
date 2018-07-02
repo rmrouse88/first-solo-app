@@ -4,7 +4,7 @@ var Tweet = require('../models/tweet-model')
 
 exports.find_one = function(req, res, next) {
     Tweet.find()
-        .limit(5)
+        .limit(20)
         .exec(function(err, tweet) {
         if (err) {console.log(err)};
         res.json(tweet)

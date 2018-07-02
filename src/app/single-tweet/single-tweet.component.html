@@ -10,7 +10,7 @@
           </div>
           <div>
           <label for = 'tweet-filter'>Filter Tweet Text</label> 
-          <input type = 'text' id = 'tweet-filter' placeholder = 'Enter text to filter tweets'>
+          <input type = 'text' id = 'tweet-filter' placeholder = 'Enter text to filter tweets' [(ngModel)]="filterValue">
           </div>
       </div>
       <div class = 'col-1'></div>
@@ -25,7 +25,7 @@
       <!-- </div> -->
     </div>
     <div class = 'col-9 col-md-6'>
-            <div class = 'tweet card' *ngFor = 'let tweet of tweets'>
+            <div class = 'tweet card' *ngFor = 'let tweet of filteredTweets' [appTweetStyle]="color">
               <div class = 'tweet card-header'>
                 {{ tweet.user_name }}
               </div>
