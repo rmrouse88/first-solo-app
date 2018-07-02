@@ -1,0 +1,28 @@
+.octicon {
+    display: inline-block;
+    vertical-align: text-top;
+    fill: currentColor;
+  }
+
+.octicon-calendar {
+   font-size: 2rem;
+    
+}
+
+.tweet-listing.page-header { 
+    padding:0px;
+    margin:0px;
+}
+
+.header-index {
+    justify-content: center;
+}
+
+.sidebar-index {
+    text-align: right;
+}
+
+.header-article { 
+    margin-bottom: 15px;
+}
+

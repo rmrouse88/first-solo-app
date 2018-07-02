@@ -1,29 +1,47 @@
-<div class = 'page-header'> 
-  <h1>{{ pageTitle }}</h1>
-</div>
-<div class = 'row'>
-  <div class = 'col-xs-6'>
-    <label for = 'tweet-filter'>Filter Tweet Text</label> 
-    <input type = 'text' id = 'tweet-filter' placeholder = 'Enter text to filter tweets'>
-  </div>
-</div>
-<div class = 'container' *ngIf = 'tweets && tweets.length'>
-<div class = 'row' *ngFor = 'let tweet of tweets'>
-  <div class = 'tweet card'>
-    <div class = 'tweet card-header'>
-      {{ tweet.user_name }}
-    </div>
-    <div class = 'tweet card-body'>
-      {{ tweet.text}}
-    </div>
-  </div>
-</div>
-<div class = 'row'>
-    <button class = 'btn btn-primary'> Click for good time </button>
-</div>
+<article class = 'header-article'>
+  <div class = 'container-fluid'>
+    <div class = 'row header-index'>
+      <div class = 'col-3'>
 
-</div>
+      </div>
+      <div class = 'col-8'>
+          <div class = 'tweet-listing page-header'> 
+              <h1>{{ pageTitle }}</h1>
+          </div>
+          <div>
+          <label for = 'tweet-filter'>Filter Tweet Text</label> 
+          <input type = 'text' id = 'tweet-filter' placeholder = 'Enter text to filter tweets'>
+          </div>
+      </div>
+      <div class = 'col-1'></div>
+    </div>
+  </div>
+</article>
+<div class = 'container-fluid'>
+  <div class = 'row'>
+    <div class = "col-2 col-md-3 sidebar-index">
+      <!-- <div class = "floating-sidebar-index"> -->
+        <app-floating-sidebar></app-floating-sidebar>
+      <!-- </div> -->
+    </div>
+    <div class = 'col-9 col-md-6'>
+            <div class = 'tweet card' *ngFor = 'let tweet of tweets'>
+              <div class = 'tweet card-header'>
+                {{ tweet.user_name }}
+              </div>
+              <div class = 'tweet card-body'>
+                {{ tweet.text}}
+              </div>
+          
+            </div>
+    </div>
+    <div class = 'col-1 col-md-3'></div>
+    
+  </div>
   
+  </div>
+
+
 
 
 

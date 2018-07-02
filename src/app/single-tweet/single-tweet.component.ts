@@ -3,6 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { TweetListService } from '../core/tweet-list.service'
 import { ITweet } from '../interfaces/tweet.interface'
 
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser'
+import { calendar } from 'octicons';
+
 @Component({
   selector: 'app-single-tweet',
   templateUrl: './single-tweet.component.html',
@@ -13,9 +16,14 @@ export class SingleTweetComponent implements OnInit {
 
   tweets: ITweet[] = [];
 
-  constructor(private tweetListService: TweetListService) { }
+  public calendarIcon: SafeHtml;
 
+  constructor(private tweetListService: TweetListService,
+              private sanitizer: DomSanitizer) { }
+  
   ngOnInit() {
+    this.calendarIcon = this.sanitizer.bypassSecurityTrustHtml(calendar.toSVG());
+
     this.tweetListService.find_one()
       .subscribe(
         (data:ITweet[]) => {
@@ -25,4 +33,8 @@ export class SingleTweetComponent implements OnInit {
         },
         (err: any) => console.log(err))
   }
+
+  
+
+
 }
