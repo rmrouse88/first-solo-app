@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static(path.join(__dirname, 'dist')));
 
 //mongoDB connection
-var mongoDBurl = 'mongodb+srv://rmrouse88:5Tgb5rdx!@firstappotc-lyrpz.mongodb.net/test?retryWrites=true';
+var mongoDBurl = 'mongodb+srv://<userName>:<password>@firstappotc-lyrpz.mongodb.net/test?retryWrites=true';
 
 mongoose.connect(mongoDBurl, options = {dbName: 'otc_tweet_master'}, function(err, res) {
     console.log(res)
@@ -38,30 +38,6 @@ app.use(function(req, res, next) {
     err.status = 404;
     next(err);
 });
-
-// error handlers
-
-// development error handler
-// // will print stacktrace
-// if (app.get('env') === 'development') {
-//     app.use(function(err, req, res, next) {
-//         res.status(err.status || 500);
-//         res.render('error', {
-//             message: err.message,
-//             error: err
-//         });
-//     });
-// }
-
-// // production error handler
-// // no stacktraces leaked to user
-// app.use(function(err, req, res, next) {
-//     res.status(err.status || 500);
-//     res.render('error', {
-//         message: err.message,
-//         error: {}
-//     });
-// });
 
 var debug = require('debug')('server');
 
